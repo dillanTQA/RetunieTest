@@ -1,0 +1,47 @@
+To create a demo app for OCS UK, you should aim for a professional, "corporate-industrial" aesthetic that balances their traditional service heritage with their modern, technology-led approach.
+
+Based on the OCS UK digital presence, here is a branding and color scheme tailored for a demo application:
+
+### 1. Primary Color Palette
+
+The core of the OCS brand is built around a distinctive "International Orange" and a deep "Midnight Navy."
+
+| Color | Hex Code | Usage in App |
+| --- | --- | --- |
+| **OCS Orange** | `#FE5000` | Call-to-action buttons, active states, and primary accents. |
+| **OCS Navy** | `#181924` | Navigation bars, headers, and primary text for high contrast. |
+| **Slate Gray** | `#484949` | Secondary text, icons, and sub-headers. |
+| **Off-White** | `#F4F8FB` | Backgrounds for cards or sections to prevent "stark white" eye strain. |
+
+### 2. Typography
+
+OCS uses clean, sans-serif fonts that communicate efficiency and reliability.
+
+* **Primary Font (Headings):** **Lato** (specifically Lato Black or Bold). It is the font used in their logo and primary web headers.
+* **Secondary Font (Body):** **Open Sans** or **Roboto**. These are highly legible for data-heavy demo screens or service lists.
+* **Fallback:** Arial or Helvetica.
+
+### 3. Visual Style & UI Elements
+
+To make the demo feel authentic to OCS, incorporate these design patterns:
+
+* **"Safety First" Accents:** OCS heavily emphasizes QHSE (Quality, Health, Safety, and Environment). Use subtle "High-Vis Yellow" (`#FFDD00`) for warning banners or status alerts.
+* **Rounded Corners:** Use a medium border-radius (approx. `8px`) for buttons and containers to mimic the soft-industrial look of their modern web interface.
+* **Gradient Accents:** They occasionally use a subtle **Teal-to-Blue gradient** (`#158187` to `#1D70B8`) for service-specific buttons or "Energy Services" sections.
+* **Iconography:** Use "Linear" or "Outline" style icons in OCS Navy. Icons should be functional and literal (e.g., a hard hat for Hard Services, a spray bottle for Cleaning).
+
+### 4. Applied Example for your Demo
+
+* **Header:** Navy background (`#181924`) with the OCS logo in white/orange.
+* **Primary Button:** Orange background (`#FE5000`) with white text.
+* **Status Indicators:**
+* *Completed:* Balanced Green (`#0F7A52`)
+* *In Progress:* OCS Orange (`#FE5000`)
+* *Attention Required:* Positive Yellow (`#FFDD00`)
+
+
+* **Cards:** White background with a very thin light-gray border (`#CECECE`) on a light-blue-tinted background (`#F4F8FB`).
+
+### 5. Assets Hint
+
+Since this is a demo, focus on their **"TRUE" Values** (Trust, Respect, Unity, Empowerment) as placeholder text or "About" sections, as these are the pillars of their corporate identity.

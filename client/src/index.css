@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Retinue Palette: #ABBACF (light), #52667B (mid), #1C1C26 (dark) */
+  --primary: 183 100% 44%; /* #00D6E3 - Cyan primary */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 240 17% 13%; /* #1C1C26 - Dark charcoal for header/nav */
+  --secondary-foreground: 0 0% 100%;
+
+  /* Clean white backgrounds */
+  --background: 0 0% 100%;
+  --foreground: 240 17% 13%;
+
+  /* Cards and Surfaces */
+  --card: 0 0% 100%;
+  --card-foreground: 240 17% 13%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 17% 13%;
+
+  /* UI Elements */
+  --muted: 220 20% 96%;
+  --muted-foreground: 212 15% 45%;
+  --accent: 183 100% 44%; /* #00D6E3 - Cyan accent */
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 220 20% 90%;
+  --input: 220 20% 90%;
+  --ring: 183 100% 44%;
+  
+  --radius: 4px;
+
+  --font-sans: 'Open Sans', sans-serif;
+  --font-display: 'Lato', sans-serif;
+}
+
+.dark {
+  --background: 240 17% 8%;
+  --foreground: 220 20% 92%;
+  --card: 240 17% 11%;
+  --card-foreground: 220 20% 92%;
+  --popover: 240 17% 11%;
+  --popover-foreground: 220 20% 92%;
+  --primary: 220 28% 74%; /* #ABBACF light accent as primary in dark mode */
+  --primary-foreground: 240 17% 13%;
+  --secondary: 240 17% 13%;
+  --secondary-foreground: 0 0% 95%;
+  --muted: 240 17% 15%;
+  --muted-foreground: 220 15% 60%;
+  --accent: 212 20% 40%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 240 15% 22%;
+  --input: 240 15% 22%;
+  --ring: 220 28% 74%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/10 selection:text-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .animate-enter {
+    animation: enter 0.5s ease-out forwards;
+  }
+  
+  @keyframes enter {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

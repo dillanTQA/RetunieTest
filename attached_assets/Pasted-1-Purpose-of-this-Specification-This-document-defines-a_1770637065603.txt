@@ -1,0 +1,111 @@
+1. Purpose of this Specification
+This document defines an output-based specification for the design of a web-based, white-label AI Triage Portal that supports the intake, triage and routing of professional services and resourcing requirements.
+ 
+The portal will act as a guided front door 'concierge service' into existing Retinue procure-to-pay and contractor management platforms, primarily Ryalto (day rate contractors and agency labour) and Retinue Bridge (statement of works professional services).
+ 
+The solution must be capable of being white-labelled for demonstration to different client organisations, with configuration options deliberately limited to:
+Upload of the client organisation’s logo
+Inclusion of a client strapline or positioning statement in a defined section of the interface
+Colours, typography, layouts and interaction patterns are not configurable and must follow Retinue brand guidelines. This constraint is intentional to ensure speed of deployment, consistency and low cost to serve.
+ 
+For the first iteration, the interface should be branded for OCS – UK & Ireland Facilities Services Group, with the strapline “Technology-Led, Self-Delivered Integrated FM.”
+ 
+The intent is not to specify detailed UI design or fixed decision logic, but to define the capabilities, behaviours and outcomes the portal must deliver, how it fits within a wider procure-to-pay lifecycle, and where AI is expected to be used.
+ 
+The specification is suitable for a technical designer to produce solution architecture, UX flows and a modular demo build. No live integrations are required for the demo product.
+ 
+
+
+
+
+2. Strategic Context
+The solution supports the client’s stated ambition to be technology-led, improving user experience, compliance and buying discipline through intelligent digital tooling rather than policy or manual intervention. The portal should feel modern, intuitive and assistive, reducing cognitive load for managers rather than acting as another procurement gate.
+Sales message: This is not another system to learn. It is a smart front door that helps managers get to the right outcome, first time.
+
+3. Context: End-to-End Procure-to-Pay for Professional Services
+The portal sits within a broader professional services and resourcing lifecycle. The full lifecycle is outlined for context, with in-scope stages highlighted.
+Simplified Workflow Overview
+Manage community → Identify need → AI triage portal (IN SCOPE) → Procure → Contract → Deliver → Approve → Pay → Audit & Report
+The AI triage portal is the controlled entry point that ensures demand is correctly classified, documented and governed before it reaches downstream systems.
+There may be upstream approval touchpoints via tools such as Dynamics 365 or Coupa; these are not required for this stage of the build.
+Sales message: Classify demand correctly at the front door and everything downstream becomes faster, cheaper and safer.
+
+4. Users and Primary Use Case
+The primary user is a hiring manager or budget holder who is not a procurement or resourcing specialist. The portal exists to help managers articulate what they need, understand the implications of different engagement models and move forward with confidence.
+The experience must be user-friendly, conversational and credible, avoiding procurement jargon, long forms or unnecessary friction.
+
+5. Interface Guidance for Developers
+The interface should reinforce confidence and clarity for managers. It must include:
+Manager Guidance Phrases (displayed contextually)
+At least three of the following phrases should be embedded across the interface:
+XYZ (i will updated this shortly)
+Benefit Statistics (visible on the interface)
+The interface should surface three outcome-led statistics:
+Average 6-day reduction in filling your requirement
+Average 12% savings delivered for budget holders
+Up to 35% cost exposure from risk managed upfront
+These are indicative performance outcomes and should be presented as typical results rather than guarantees.
+Process Timeline Indicator
+The interface must show users where they are in the process using procurement-aligned language, for example:
+Define need
+Confirm buying route
+Create specification
+Route to market
+Procurement & delivery (outside portal)
+This gives transparency without exposing unnecessary complexity.
+ 
+6. AI Triage Portal: Functional Stages
+AI Behaviour Principles
+The AI agent must guide rather than interrogate, adapt questioning dynamically, distinguish outcomes from delivery assumptions, summarise understanding for confirmation and provide explainable recommendations. Users must be able to override or adjust recommendations easily.
+ 
+The AI should feel like a knowledgeable commercial partner, not a rules engine or compliance form.
+ 
+Stage 1: Entry and Orientation
+The portal explains its purpose, sets expectations on completion time and confirms that no spend or commitment is made at this stage. Client logo and strapline are displayed.
+ 
+Stage 2: AI-Led Requirement Discovery
+The AI conducts conversational discovery to understand the requirement, including whether the manager already has a named contractor or supplier in mind. This must be captured early to influence routing.
+ 
+The AI extracts sufficient information to distinguish between outcome-based services and capacity-based resourcing, including scope, duration, budget sensitivity, delivery risk, level of control and supervision.
+Sales message: Managers don’t mis-buy because they’re careless. They mis-buy because no one helps them think clearly at the start.
+
+Stage 3: Engagement Route Recommendation
+The portal recommends one or more engagement routes and explains the rationale. Managers may select multiple routes in parallel, for example:
+Talent pool and agency supply
+Agency supply and statement of works suppliers
+Routes include:
+Independent contractor (day rate)
+Statement of works (professional services)
+Agency supply chain (hourly or day rate)
+ 
+Stage 4: Specification Creation
+A single core specification is created and reused across routes. If changes occur, the system must support re-routing without restarting the process, preserving audit history and decisions.
+ 
+Stage 5: Supplier Discovery
+Statement of works: the portal returns a shortlist from the professional services supplier catalogue for manager confirmation.
+Agency and talent pool routes: no shortlist is required; routing occurs based on the agreed specification.
+Supplier data for the demo can be manually uploaded.
+ 
+Stage 6: Routing, Governance and Audit
+The requirement is routed to Ryalto and/or Retinue Bridge as appropriate. The portal must generate a clear audit trail capturing inputs, AI recommendations, manager decisions and confirmations.
+ 
+Where routed to Ryalto, IR35 relevance must be identified and sufficient data captured to support downstream Kingsbridge SDS assessment.
+Sales message: This is governance you cannot achieve with a standalone ChatGPT prompt.
+
+Human-in-the-Loop Support
+At any point, the user must be able to bring a human into the process, available 24/7/365, without abandoning the workflow.
+Sales message: Technology-led does not mean technology-only.
+ 
+7. Reporting, BI and Exceptions (Out of Scope but Required in Workflow)
+The workflow must surface data for downstream reporting, including demand patterns, buying route selection, risk flags, exceptions, changes to scope and cycle times. This enables procurement and resourcing teams to add value through insight rather than manual intervention.
+ 
+Milestone-based payments for statement of works must be acknowledged as part of the downstream lifecycle.
+ 
+8. Technical Considerations (Out of Scope)
+Matching data capture to mandatory fields in Ryalto and Retinue Bridge
+Live APIs and system integrations
+Embedding or surfacing the interface within Microsoft Teams (to be explored and advised by the development team)
+ 
+9. Success Criteria
+The solution is successful if managers engage early, procurement and resourcing teams gain visibility without friction, governance is demonstrable, and the experience feels simple, modern and commercially defensible.
+
